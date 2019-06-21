@@ -17,7 +17,7 @@ with open(csvpath, newline="") as csvfile:
 #for loop scanning through the appropriate rows to see which vehicles are both 'in a garage' and 'not charging.' 
     for row in csvreader:
         if row[0].isdigit():
-            if row[0] >= "450" and row[8] == "true" and row[12] == "false":
+            if (int(row[0])) >= 450 and row[8] == "true" and row[12] == "false":
             #Updates lists with data for logging
                 unplugged_vehicle_id.append(row[0])
                 unplugged_vehicle_location.append(row[7])
